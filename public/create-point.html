@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scaled=1.0>
+
+    <link rel="stylesheet" href="./styles/main.css"><link>
+    <link rel="stylesheet" href="./styles/create-point.css"><link>
+    <link rel="stylesheet" href="./styles/responsive.css"><link>
+    
+    <title>Ponto de Coleta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+
+    <body>
+        <div id="page-create-point">
+            
+                <header>
+                    <img src="../assets/logo.svg" alt="Ecoletas">
+                    <a href="#">
+                        <span></span>
+                        Voltar para a home
+                    </a>
+                </header>
+        
+                <form action="">
+                    <h1>Cadastre do ponto de coleta</h1>
+                    
+                    <fieldset> <!--Ele faz um agrupamento de conjuntos, essa tag é apenas para organização mesmo -->
+                        <legend>
+                            <h2>Dados da Entidade</h2>
+                        </legend>
+
+                        <div class="field">
+                            <label for="name">Nome da Entidade</label>
+                            <input type="text" name="name" placeholder="Associação ABC"></input>
+                        </div>
+
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="address">Endereço</label>
+                                <input type="text" name="address" placeholder="Rua 7 de Setembro">
+                            </div>
+                            <div class="field">
+                                <label for="number">Número/Complemento</label>
+                                <input type="text" name="text" placeholder="nº70 bloco 10">
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="State">Estado</label>
+                                <select name="uf">
+                                    <option value="">Selecione o Estado</option>
+                                </select>
+                                <input type="hidden" name="state"></input> <!--A ideia é não deixar que a informação apareça na URL como código, mas como os nome devido para o momento em que jogarmos para o back-end. Se ele vai fazer outra chamado na API e isso deixa o site pesado-->
+                            </div>
+
+                            <div class="field">
+                                <label for="city">Cidade</label>
+                                <select name="city" disabled>
+                                    <option value="">Selecione a cidade</option>
+                                </select>
+                                <input type="hidden" name="city"></input> <!--A ideia é não deixar que a informação apareça na URL como código, mas como os nome devido para o momento em que jogarmos para o back-end. Se ele vai fazer outra chamado na API e isso deixa o site pesado-->
+
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset> <!--Ele faz um agrupamento de conjuntos, essa tag é apenas para organização mesmo -->
+                        <legend>
+                            <h2>Itens de coleta</h2>
+                        </legend>
+                    </fieldset>
+
+                    <button type="submit">Cadastrar ponto de coleta</button>
+                </form>
+
+        
+            
+        </div>
+
+     <script src="../public/scripts/create-point.js"></script>
+    </body>
+
+</html>
