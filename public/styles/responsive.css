@@ -25,6 +25,15 @@
         align-items: center;
     
     }
+
+    #page-results #cards{
+        grid-template-columns: 1fr; /*quando a tela atingir os 900px, o que antes era 03 colunas, vai ficar somente 01*/
+    }
+
+    #page-results #cards img{
+        height: 200px;
+    }
+
 }
 
 @media(min-width: 1700px){

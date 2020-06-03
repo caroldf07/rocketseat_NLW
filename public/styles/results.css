@@ -1,0 +1,82 @@
+#page-results{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#page-results header{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#page-results header a{
+    color: var(--title-color);
+    display: flex;
+    align-items: center;
+}
+
+#page-results header a span{
+    background-image: url('../../assets/arrow-left.svg');
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+}
+
+main{
+    margin-top: 48px;
+}
+
+main h3{
+    margin-bottom: 32px;
+}
+
+main #cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+
+
+}
+
+main #cards img{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover; /*a imagem vai ocupar todo o espaço que foi reservado para ele não mexerá em sua dimensões (assim não perde a proporção)*/
+    
+}
+
+main #cards h2{
+    margin: 18px 0px;
+    font-size: 20px;
+    line-height: 41px;
+    
+}
+
+main #cards h3{
+    color: #34CB79;
+    margin: 15px 0px;
+    font-size: 18px;
+    
+}
+
+main #cards p{
+    color: var(--title-color);
+    
+}
+
+body ::after{
+    content: '';
+    background-color: white;
+    position: fixed;
+    top:238px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+}

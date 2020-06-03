@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./styles/main.css"><link>
     <link rel="stylesheet" href="./styles/home.css"><link>
+    <link rel="stylesheet" href="./styles/modal.css"><link>
     <link rel="stylesheet" href="./styles/responsive.css"><link>
     
     <script></script>
@@ -23,7 +24,7 @@
             <div class="main-content">
                 <header>
                     <img src="../assets/logo.svg" alt="Ecoletas">
-                    <a href="#">
+                    <a href="/public/create-point.html">
                         <span></span>
                         Cadastre um ponto de coleta
                     </a>
@@ -38,12 +39,33 @@
                         <strong>Pesquisar pontos de coleta</strong>
                     </a>
                 </main>
+                
 
         
             </div>
         </div>
 
+        <div id='modal' class="hide"> <!--Essa tela é criada aqui, pois é uma janela que se abre sem sair da paǵina-->
+            <div class="content-modal">
+                <div class="header">
+                    <h1>Pontos de Coleta</h1>
+                    <a href="">Fechar</a>
+                </div>
 
+            <form action="">
+                <label for="search">Cidade
+                <div class="search-field">
+                    <input type="text" name='search' placeholder="Escreva a cidade">
+                    <button>
+                        <img src="../assets/search.svg" alt="buscar">
+                    </button>
+                </label>
+                </div>
+            </form>
+            </div>
+        </div>
+
+        <script src="../public/scripts/index.js"></script>
     </body>
 
 </html>

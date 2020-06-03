@@ -1,0 +1,76 @@
+#modal{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.781);
+    position: fixed;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 400ms;
+}
+
+#modal.hide{
+    display: none;
+}
+
+#modal .content-modal{
+    color:white;
+    width: 450px;
+}
+
+#modal .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+#modal .header a{
+    background-image: url('../../assets/x.svg');
+    width: 20px;
+    height: 20px;
+    display: flex;
+    font-size: 0.01px; /*Colocamos a fonte nesse tamanho para que o navegador entenda o que é isso, mas não seja visual para o usuário*/
+}
+
+#modal .header h1{
+    color: white;
+    font-size: 36px;
+    line-height: 42px;
+
+}
+
+#modal form label{
+    font-size: 14px;
+    line-height: 16px;
+
+    display: block;
+    margin-bottom: 80px;
+}
+
+#modal form .search-field{
+    display: flex;
+}
+
+#modal form input{
+    flex: 1;
+    border-radius: 10px 0 0 10px;
+    border: 0;
+    padding: 16px 20px;
+    font-size: 16px;
+}
+
+#modal form button{
+    width: 50px;
+    height: 50px;
+    background-color: var(--title-color);
+    border: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+#modal form button:hover{
+    background-color: var(--background-pri-color);
+
+}
