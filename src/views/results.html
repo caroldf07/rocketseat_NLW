@@ -1,30 +1,18 @@
-<!DOCTYPE html>
-
-<html lang="pt-BR">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scaled=1.0>
-
-    <link rel="stylesheet" href="./styles/main.css"><link>
-    <link rel="stylesheet" href="./styles/results.css"><link>
-    <link rel="stylesheet" href="./styles/responsive.css"><link>
-    
-    <title>Pontos de coleta encontrados</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+{% extends "layout.html" %} <!--Essa linha vai herdar tudo o que consta nessa folha e replicar tudo o que consta no layout.html-->
 
 
+    {% block styles %}
+        <link rel="stylesheet" href="./styles/results.css"><link>
+    {% endblock styles %}
 
-    <body>
-        <div id="page-results">
-            
-                <header>
-                    <img src="../assets/logo.svg" alt="Ecoletas">
-                    <a href="/public/index.html">
-                        <span></span>
-                        Voltar para a home
-                    </a>
-                </header>
+    {% block title %}
+        <title>Pontos de coleta encontrados</title>
+    {% endblock title %}
+
+    {% set bodyId = "page-results" %} <!--estabelece o nome da classe para que o layout altere a variável lá dentro-->
+
+            {% block content %}
+                {% include "partial/page-header.html" %} <!--Esse trecho está no partial/page-header-->
         
                 <main>
                     <h3>
@@ -57,11 +45,4 @@
                         </div>
                     </div>
                 </main>
-
-        
-            
-        </div>
-
-    </body>
-
-</html>
+            {% endblock content %}

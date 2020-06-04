@@ -1,31 +1,18 @@
-<!DOCTYPE html>
-
-<html lang="pt-BR">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scaled=1.0>
-
-    <link rel="stylesheet" href="./styles/main.css"><link>
-    <link rel="stylesheet" href="./styles/create-point.css"><link>
-    <link rel="stylesheet" href="./styles/responsive.css"><link>
-    
-    <title>Ponto de Coleta</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+{% extends "layout.html" %} <!--Essa linha vai herdar tudo o que consta nessa folha e replicar tudo o que consta no layout.html-->
 
 
+    {% block styles %}
+        <link rel="stylesheet" href="./styles/create-point.css"><link>
+    {% endblock styles %}
 
-    <body>
-        <div id="page-create-point">
-            
-                <header>
-                    <img src="../assets/logo.svg" alt="Ecoletas">
-                    <a href="/public/index.html">
-                        <span></span>
-                        Voltar para a home
-                    </a>
-                </header>
-        
+    {% block title %}
+        <title>Ponto de Coleta</title>
+    {% endblock title %}
+
+    {% set bodyId = "page-create-point" %} <!--estabelece o nome da classe para que o layout altere a variável lá dentro-->
+
+            {% block content %}
+                {% include "partial/page-header.html" %} <!--Esse trecho está no partial/page-header-->
                 <form action="">
                     <h1>Cadastre do ponto de coleta</h1>
                     
@@ -72,32 +59,32 @@
 
                     <fieldset> <!--Ele faz um agrupamento de conjuntos, essa tag é apenas para organização mesmo -->
                         <legend>
-                            <h2>Itens de coleta</h2>
+                            <h2>Selecione o(s) item(ns) de coleta</h2>
                         </legend>
 
                         <div class="items-grid">
                             <li data-id=1 >
-                                <img src="..//assets/lampadas.svg" alt="lampadas"><span>Lâmpadas</span>
+                                <img src="./assets/lampadas.svg" alt="lampadas"><span>Lâmpadas</span>
                             </li>
 
                             <li data-id=2 >
-                                <img src="..//assets/baterias.svg" alt="pilhas-baterias"><span>Pilhas e Baterias</span>
+                                <img src="./assets/baterias.svg" alt="pilhas-baterias"><span>Pilhas e Baterias</span>
                             </li>
 
                             <li data-id=3 >
-                                <img src="..//assets/papeis-papelao.svg" alt="papeis-papelao"><span>Papéis e Papelão</span>
+                                <img src="./assets/papeis-papelao.svg" alt="papeis-papelao"><span>Papéis e Papelão</span>
                             </li>
 
                             <li data-id=4 >
-                                <img src="..//assets/eletronicos.svg" alt="residuos-eletronicos"><span>Resíduos Eletrônicos</span>
+                                <img src="./assets/eletronicos.svg" alt="residuos-eletronicos"><span>Resíduos Eletrônicos</span>
                             </li>
 
                             <li data-id=5 >
-                                <img src="..//assets/organicos.svg" alt="residuos-organicos"><span>Resíduos Orgânicos</span>
+                                <img src="./assets/organicos.svg" alt="residuos-organicos"><span>Resíduos Orgânicos</span>
                             </li>
 
                             <li data-id=6 >
-                                <img src="..//assets/oleo.svg" alt="oleo-de-cozinha"><span>Óleo de cozinha</span>
+                                <img src="./assets/oleo.svg" alt="oleo-de-cozinha"><span>Óleo de cozinha</span>
                             </li>
                             <input type="hidden" name="item"></input>
 
@@ -106,12 +93,9 @@
 
                     <button type="submit">Cadastrar ponto de coleta</button>
                 </form>
+            {% endblock content %}
 
-        
-            
-        </div>
 
-     <script src="../public/scripts/create-point.js"></script>
-    </body>
-
-</html>
+            {% block scripts %}
+                <script src="./scripts/create-point.js"></script>
+            {% endblock scripts %}

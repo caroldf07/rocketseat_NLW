@@ -1,0 +1,25 @@
+{
+  "name": "nextlevelweek",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caroldf07/rocketseat_NLW.git"
+  },
+  "author": "caroldf07 <carolina.df@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "nunjucks": "^3.2.1"
+  },
+  "description": "Projeto desenvolvido no Next Level Week (01/06 a 07/06) realizado pela Rocket Seat",
+  "bugs": {
+    "url": "https://github.com/caroldf07/rocketseat_NLW/issues"
+  },
+  "homepage": "https://github.com/caroldf07/rocketseat_NLW#readme",
+  "devDependencies": {}
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scaled=1.0>
+
+    <link rel="stylesheet" href="./styles/main.css"><link>
+    <link rel="stylesheet" href="./styles/responsive.css"><link>
+
+    {% block styles %}
+    {% endblock styles %}
+
+    {% block title %}
+    {% endblock title %}
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+
+    <body>
+        <div id="{{ bodyId }}"> <!--na comunicação com a outra página, ele vai puxar o nome que ela quer que tenha e atribuir o valor respectivo-->
+            {% block content %}
+            {% endblock content %}
+        </div>
+
+            {% block modal %}
+            {% endblock modal %}
+
+            {% block scripts %}
+            {% endblock scripts %}
+    </body>
+
+</html>
