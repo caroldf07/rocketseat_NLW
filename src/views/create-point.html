@@ -3,6 +3,7 @@
 
     {% block styles %}
         <link rel="stylesheet" href="./styles/create-point.css"><link>
+        <link rel="stylesheet" href="./styles/modal.css"><link>
     {% endblock styles %}
 
     {% block title %}
@@ -13,7 +14,7 @@
 
             {% block content %}
                 {% include "partial/page-header.html" %} <!--Esse trecho está no partial/page-header-->
-                <form action="">
+                <form action="/savepoint" method="POST" > <!--por padrão o form tem como metho o GET, aqui nós trocamos para POST para registrar os dados no /savepoint-->
                     <h1>Cadastre do ponto de coleta</h1>
                     
                     <fieldset> <!--Ele faz um agrupamento de conjuntos, essa tag é apenas para organização mesmo -->
@@ -26,7 +27,19 @@
                             <input type="text" name="name" placeholder="Associação ABC" required></input>
                         </div>
 
+                        <div class="field">
+                            <label for="image">Foto da Entidade</label>
+                            <input type="text" name="image" placeholder="https://" required></input>
+                        </div>
+
+                        <div class="field">
+                            <label for="cep">CEP</label>
+                             <input type="number" name="cep" placeholder="0100000" maxlength = "9" required = "required" >
+                        </div>
+
                         <div class="field-group">
+                            
+
                             <div class="field">
                                 <label for="address">Endereço</label>
                                 <input type="text" name="address" placeholder="Rua 7 de Setembro" required>
@@ -63,27 +76,27 @@
                         </legend>
 
                         <div class="items-grid">
-                            <li data-id=1 >
+                            <li data-id="Lâmpadas" >
                                 <img src="./assets/lampadas.svg" alt="lampadas"><span>Lâmpadas</span>
                             </li>
 
-                            <li data-id=2 >
+                            <li data-id="Pilhas e Baterias" >
                                 <img src="./assets/baterias.svg" alt="pilhas-baterias"><span>Pilhas e Baterias</span>
                             </li>
 
-                            <li data-id=3 >
+                            <li data-id="Papéis e Papelão" >
                                 <img src="./assets/papeis-papelao.svg" alt="papeis-papelao"><span>Papéis e Papelão</span>
                             </li>
 
-                            <li data-id=4 >
+                            <li data-id="Resíduos Eletrônicos" >
                                 <img src="./assets/eletronicos.svg" alt="residuos-eletronicos"><span>Resíduos Eletrônicos</span>
                             </li>
 
-                            <li data-id=5 >
+                            <li data-id="Resíduos Orgânicos" >
                                 <img src="./assets/organicos.svg" alt="residuos-organicos"><span>Resíduos Orgânicos</span>
                             </li>
 
-                            <li data-id=6 >
+                            <li data-id="Óleo de cozinha" >
                                 <img src="./assets/oleo.svg" alt="oleo-de-cozinha"><span>Óleo de cozinha</span>
                             </li>
                             <input type="hidden" name="item"></input>
@@ -94,6 +107,13 @@
                     <button type="submit">Cadastrar ponto de coleta</button>
                 </form>
             {% endblock content %}
+
+            {% block modal %}
+                {% if saved %} <!--sempre que a variável especificada no server, for true, ele mostra a thanks page-->
+                    {% include "partial/point-created.html"%}
+                {% endif %}
+            {% endblock modal %}
+
 
 
             {% block scripts %}

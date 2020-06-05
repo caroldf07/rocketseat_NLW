@@ -11,38 +11,41 @@
 
     {% set bodyId = "page-results" %} <!--estabelece o nome da classe para que o layout altere a variável lá dentro-->
 
-            {% block content %}
-                {% include "partial/page-header.html" %} <!--Esse trecho está no partial/page-header-->
-        
-                <main>
-                    <h3>
-                        <strong>2 pontos </strong>encontrados
-                    </h3>
+        {% block content %}
+            {% include "partial/page-header.html" %} <!--Esse trecho está no partial/page-header-->
+    
+            <main>
+                <h3>
+                    <strong>{{ total }} pontos </strong>encontrados
+                </h3>
 
-                    <div id="cards">
-                        <div id="card">
-                            <img src="https://images.pexels.com/photos/1495580/pexels-photo-1495580.jpeg" alt="">
-                            <h2>Colectoria</h2>
-                            <h3>Resíduos eletrônicos, lâmpadas</h3>
+                <div id="cards">
 
-                            <p>
-                                Rio do Sul, Santa Catarina <br>
-                                Guilherme Gembalia, Jardim América <br>
-                                nº 260
-                            </p>
-                        </div>
+                    {% if total > 0 %}
 
-                        <div id="card">
-                            <img src="https://images.pexels.com/photos/1555199/pexels-photo-1555199.jpeg" alt="">
-                            <h2>PaperSider</h2>
-                            <h3>Papéis e papelão</h3>
+                        {% for place in places %}
 
-                            <p>
-                                Rio do Sul, Santa Catarina <br>
-                                Guilherme Gembalia, Jardim América <br>
-                                nº 260
-                            </p>
-                        </div>
-                    </div>
-                </main>
-            {% endblock content %}
+                            <div id="card">
+                                <img src="{{ place.image }}" alt="">
+                                <h2>{{ place.name }}</h2>
+                                <h3>{{ place.items }}</h3>
+
+                                <p>
+                                    {{ place.state }}, {{ place.city }} <br><br>
+                                    {{ place.cep }}<br>
+                                    {{ place.address }} <br>
+                                    {{ place.address2 }}
+                                </p>
+                            </div>
+                        {% endfor %}
+
+                    {% else %}
+                        <h3>
+                            <strong>Local</strong> não encontrado
+                        </h3>
+
+                    {% endif %}
+                
+                </div>
+            </main>
+        {% endblock content %}

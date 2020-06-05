@@ -74,3 +74,15 @@
     background-color: var(--background-pri-color);
 
 }
+
+#modal .point-created{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#modal .point-created h1{
+    color:white;
+    
+}
