@@ -31,10 +31,13 @@ Projeto desenvolvido no Next Level Week (01/06 a 07/06) realizado pela Rocket Se
 ![](https://imgur.com/RBSMF5s.gif)
 
 ![](https://i.imgur.com/ZqCdefn.png)
+
 Home Page (no mobile)
 
 ![](https://imgur.com/P8pEW5G.png)
+
 Search Page (no desktop)
 
 ![](https://imgur.com/VabaObK.png)
+
 Results Page (no mobile)
