@@ -14,6 +14,7 @@ Projeto desenvolvido no Next Level Week (01/06 a 07/06) realizado pela Rocket Se
 - Javascript
 - Express
 - Nunjucks
+- SQLite
 
 ## Funcionalidades implementadas
 
