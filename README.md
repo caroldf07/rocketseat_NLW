@@ -1,5 +1,6 @@
 # RocketSeat - Next Level Week
 Projeto desenvolvido no Next Level Week (01/06 a 07/06) realizado pela Rocket Seat
+
 ![](https://img.shields.io/github/languages/count/caroldf07/rocketseat_NLW?color=green&style=for-the-badge) ![](https://img.shields.io/github/languages/top/caroldf07/rocketseat_NLW?style=for-the-badge)
 
 ## O projeto
@@ -27,10 +28,13 @@ Projeto desenvolvido no Next Level Week (01/06 a 07/06) realizado pela Rocket Se
 - Navbar fixo
 
 ## Imagens e GIF
-[![GIF](CloudApp "GIF")](https://share.getcloudapp.com/wbuWNdlg "GIF")
+![](https://imgur.com/RBSMF5s.gif)
 
-[![Home Page](Ecoleta"Home Page")](https://imgur.com/ZqCdefn "Home Page")
+![](https://i.imgur.com/ZqCdefn.png)
+Home Page (no mobile)
 
-[![Search](Search "Search")](https://imgur.com/P8pEW5G "Search")
+![](https://imgur.com/P8pEW5G.png)
+Search Page (no desktop)
 
-[![Results](Results "Results")](https://imgur.com/VabaObK "Results")
+![](https://imgur.com/VabaObK.png)
+Results Page (no mobile)
